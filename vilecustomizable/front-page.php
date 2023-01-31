@@ -1,8 +1,12 @@
 <?php
 	get_header();
-	
+
 	//13 is the id of "home sweet home"
-	$curr_page_id = 13;
+	//$curr_page_id = 13;
+
+	//current page (homepage) id
+	$curr_page_id = $post->ID;
+
 ?>
 	<?php if (get_theme_mod('set_main_visibility', 1) == 0) { ?>
 		<!-- Mashead header-->
@@ -15,7 +19,7 @@
 							
 							<h1 class="main-title display-1 lh-1 mb-3"><?php echo __(get_theme_mod('set_main_title'), 'vile'); ?> </h1> 
 
-							<p class="main-desc lead fw-normal text-muted mb-5"><?php echo __(get_theme_mod('set_main_desc'), 'vile'); ?></p>
+							<p class="main-desc lead fw-normal text-muted mb-5"><?php echo nl2br(__(get_theme_mod('set_main_desc'), 'vile')); ?></p>
 							<div class="d-flex flex-column flex-lg-row align-items-center">
 								<a class="main-dwnld-1 me-lg-3 mb-4 mb-lg-0" href="<?php echo get_theme_mod('set_dwnld_btn_1_link'); ?>" target="_blank">
 									<img class="app-badge" src=" 
@@ -214,7 +218,7 @@
 			<div class="cta-content">
 				<div class="container px-5">
 					<h2 class="text-white display-1 lh-1 mb-4">
-					<?php echo get_post_meta($curr_page_id, "download_title", true); ?>
+					<?php echo nl2br(get_post_meta($curr_page_id, "download_title", true)); ?>
 					</h2>
 					<a class="btn btn-outline-light py-3 px-4 rounded-pill" href="https://startbootstrap.com/theme/new-age" target="_blank">Download for free</a>
 				</div>

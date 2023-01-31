@@ -270,7 +270,7 @@
             'set_main_desc', array(
                 'type' => 'theme_mod',
                 'default' => '',
-                'sanitize_callback' => 'sanitize_text_field'
+                'sanitize_callback' => 'wp_filter_nohtml_kses'
             )
         );
 
@@ -279,7 +279,7 @@
                 'label' => __('App Description', 'vile'),
                 'description' => 'Enter main app description',
                 'section' => 'sec_main',
-                'type' => 'text',
+                'type' => 'textarea',
             )
         );
 
