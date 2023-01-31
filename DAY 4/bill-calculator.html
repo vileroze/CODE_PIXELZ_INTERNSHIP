@@ -15,10 +15,18 @@
       <div class="row mb-5">
         <div class="col">
           <h1>Bill Calculator</h1>
-          <div class="input-group mb-3">
-              <input type="number" id="units" placeholder="Enter your units: " class="form-control" aria-label="user input" aria-describedby="button-submit">
-              <button class="btn btn-success btn-outline-secondary text-light" type="button" id="button-submit" onclick="billCalc()">COUNT</button>
-          </div>
+
+          <label for="sel1" class="form-label">Select your power plan (in Amperes)</label>
+          <select class="form-select mb-5" id="power" name="sellist1">
+            <option>5</option>
+            <option>15</option>
+            <option>30</option>
+            <option>60</option>
+          </select>
+
+          <input type="number" id="units" placeholder="Enter your units: " class="form-control mb-5" aria-label="user input" aria-describedby="button-submit">
+          <button class="btn btn-success" type="button" id="button-submit" onclick="billCalc()">SUBMIT</button>
+          
           <p id="bill-result"></p>
         </div>
       </div>
